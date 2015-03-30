@@ -38,6 +38,7 @@ using SharpDX.Direct2D1;
 using SharpDX.Direct3D;
 using SharpDX.Direct3D11;
 using SharpDX.DXGI;
+using SharpDX.Mathematics.Interop;
 using Device = SharpDX.Direct3D11.Device;
 using FeatureLevel = SharpDX.Direct3D.FeatureLevel;
 
@@ -134,7 +135,7 @@ namespace Scenario1Component
                 // Begin drawing - returns a target surface and an offset to use as the top left origin when drawing.
                 try
                 {
-                    Point offset;
+                    RawPoint offset;
                     using (var surface = sisNative.BeginDraw(updateRectNative, out offset))
                     {
 
